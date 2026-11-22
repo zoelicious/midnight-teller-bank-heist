@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Midnight Teller — Bank Heist</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #101e1e;
+    min-height: 100%;
+    font-family: system-ui, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  #wrap {
+    width: min(1280px, 100%);
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #efe4c8;
+    cursor: crosshair;
+  }
+  #help {
+    color: #c9d4c9;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 1280px;
+  }
+  #help b { color: #ffd94a; }
+</style>
+</head>
+<body>
+  <div id="wrap"><canvas id="game" width="1280" height="720"></canvas></div>
+  <div id="help">
+    <b>WASD / arrows</b> move &nbsp;·&nbsp; <b>Shift</b> sprint &nbsp;·&nbsp; <b>E</b> crack the safe / crawl the vent
+    &nbsp;·&nbsp; <b>1</b> smoke $150 &nbsp;·&nbsp; <b>2</b> EMP $250 &nbsp;·&nbsp; <b>3</b> decoy $100 (aim with mouse)
+    &nbsp;·&nbsp; <b>Space</b> stop the safe dial &nbsp;·&nbsp; Steal $600+, reach the getaway van.
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+// The Midnight Teller — bank heist stealth game.
+// config.js: every tuning number and palette entry in one place, so the
+// rest of the game reads like a spec instead of a pile of magic numbers.
+// Palette rule (bright, high contrast): safe = green/teal, danger = red/amber,
+// loot = gold. Never dark: the floor is light marble in every zone.
+
+export const CFG = {
+  W: 1280,
+  H: 720,
+  PLAYER_R: 14,
+  PLAYER_SPEED: 175,
+  PLAYER_SPRINT: 238,
+  GUARD_PATROL_SPEED: 72,
+  GUARD_SUSPECT_SPEED: 112,
+  GUARD_CHASE_SPEED: 152,
+  GUARD_INVESTIGATE_SPEED: 122,
+  GUARD_RANGE: 195,
+  GUARD_HALF_ANGLE: 0.56, // ~32 degrees each side
+  GUARD_TOUCH_R: 26,
+  CAM_RANGE: 215,
+  CAM_HALF_ANGLE: 0.42,
+  ALARM_GUARD_RATE: 30, // per second while fully seen, scaled by closeness
+  ALARM_CAM_RATE: 15,
+  ALARM_DECAY: 11, // per second while hidden
+  ALARM_SHADOW_DECAY_MULT: 1.6,
+  ALARM_EMP_DECAY_MULT: 3,
+  ALARM_CAUGHT: 100,
+  ALARM_CAUGHT_RESET: 35,
+  CAUGHT_LOOT_KEEP: 0.75,
+  CAUGHT_FREEZE_S: 1.4,
+  WIN_LOOT_MIN: 600,
+  GHOST_BONUS: 300,
+  GHOST_ALARM_MAX: 50,
+  PAR_TIME_S: 240,
+  SMOKE_COST: 150,
+  SMOKE_R: 92,
+  SMOKE_S: 6,
+  SMOKE_CD: 10,
+  EMP_COST: 250,
+  EMP_S: 8,
+  EMP_CD: 15,
+  DECOY_COST: 100,
+  DECOY_S: 4,
+  DECOY_CD: 8,
+  DECOY_LURE_R: 340,
+  CRACK_FAIL_ALARM: 12,
+  VENT_CRAWL_S: 1.6,
+};
+
+export const PAL = {
+  // floors — light marble, one tint per zone so navigation reads instantly
+  floorLobby: '#efe4c8',
+  floorTeller: '#ddf0dd',
+  floorVault: '#f7e7bd',
+  floorOffice: '#e2e6f8',
+  floorCorridor: '#e9e1cf',
+  floorVent: '#c9d6cf',
+  floorShadow: 'rgba(38, 64, 120, 0.20)',
+  tileLine: 'rgba(120, 100, 60, 0.16)',
+  // walls and trims
+  wall: '#1f6f6b',
+  wallTop: '#2f8f89',
+  wallEdge: '#f2efe9',
+  // actors
+  player: '#0e7c7b',
+  playerDark: '#0a5453',
+  playerOutline: '#ffd94a',
+  guard: '#274690',
+  guardCap: '#1b3268',
+  guardAlert: '#c22e2e',
+  // danger / safe / loot
+  coneCalm: 'rgba(255, 176, 32, 0.30)',
+  coneCalmEdge: 'rgba(255, 176, 32, 0.75)',
+  coneAlert: 'rgba(255, 64, 48, 0.38)',
+  coneAlertEdge: 'rgba(255, 64, 48, 0.85)',
+  camArc: 'rgba(255, 176, 32, 0.28)',
+  camArcEdge: 'rgba(255, 176, 32, 0.7)',
+  camOff: 'rgba(120, 130, 140, 0.25)',
+  gold: '#ffc93c',
+  goldDark: '#c98f12',
+  lootGlow: 'rgba(255, 201, 60, 0.55)',
+  smoke: 'rgba(220, 225, 230, 0.85)',
+  // props
+  counterWood: '#b98a4e',
+  counterTop: '#d9b078',
+  desk: '#7a6a55',
+  planter: '#3e9b4f',
+  planterPot: '#a8573c',
+  safeSteel: '#8a97a8',
+  safeDark: '#5d6b7c',
+  van: '#2fbf71',
+  // HUD
+  panel: 'rgba(16, 34, 34, 0.82)',
+  panelEdge: 'rgba(255, 255, 255, 0.25)',
+  text: '#f7f4ea',
+  textDim: '#c9d4c9',
+  alarmGreen: '#2fbf71',
+  alarmAmber: '#ffb020',
+  alarmRed: '#ff4030',
+  titleBg: 'rgba(10, 26, 26, 0.55)',
+};
